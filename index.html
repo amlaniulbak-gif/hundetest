@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐕 Find Din Perfekte Hund</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐕 Find Din Perfekte Hund</h1>
+        
+        
+        <div id="priorities-section" class="section">
+            <h2>Trin 1: Vælg dine prioriteringer</h2>
+            <p>Brug sliderne til at vise, hvor vigtige de forskellige faktorer er for dig:</p>
+            
+            <div class="slider-container">
+                <label for="size-priority">Størrelse på hunden:</label>
+                <div class="slider-wrapper">
+                    <span>Ikke vigtig</span>
+                    <input type="range" id="size-priority" min="1" max="5" value="3">
+                    <span>Meget vigtig</span>
+                </div>
+                <div class="value">Vægt: <span id="size-priority-value">3</span></div>
+            </div>
+
+            <div class="slider-container">
+                <label for="alone-priority">Kan være alene hjemme:</label>
+                <div class="slider-wrapper">
+                    <span>Ikke vigtig</span>
+                    <input type="range" id="alone-priority" min="1" max="5" value="3">
+                    <span>Meget vigtig</span>
+                </div>
+                <div class="value">Vægt: <span id="alone-priority-value">3</span></div>
+            </div>
+
+            <div class="slider-container">
+                <label for="social-priority">Social adfærd:</label>
+                <div class="slider-wrapper">
+                    <span>Ikke vigtig</span>
+                    <input type="range" id="social-priority" min="1" max="5" value="3">
+                    <span>Meget vigtig</span>
+                </div>
+                <div class="value">Vægt: <span id="social-priority-value">3</span></div>
+            </div>
+
+            <div class="slider-container">
+                <label for="activity-priority">Aktivitetsniveau:</label>
+                <div class="slider-wrapper">
+                    <span>Ikke vigtig</span>
+                    <input type="range" id="activity-priority" min="1" max="5" value="3">
+                    <span>Meget vigtig</span>
+                </div>
+                <div class="value">Vægt: <span id="activity-priority-value">3</span></div>
+            </div>
+
+            <div class="slider-container">
+                <label for="experience-priority">Erfaring med hunde:</label>
+                <div class="slider-wrapper">
+                    <span>Ikke vigtig</span>
+                    <input type="range" id="experience-priority" min="1" max="5" value="3">
+                    <span>Meget vigtig</span>
+                </div>
+                <div class="value">Vægt: <span id="experience-priority-value">3</span></div>
+            </div>
+
+            <div class="slider-container">
+                <label for="grooming-priority">Pelspleje:</label>
+                <div class="slider-wrapper">
+                    <span>Ikke vigtig</span>
+                    <input type="range" id="grooming-priority" min="1" max="5" value="3">
+                    <span>Meget vigtig</span>
+                </div>
+                <div class="value">Vægt: <span id="grooming-priority-value">3</span></div>
+            </div>
+
+            <div class="slider-container">
+                <label for="family-priority">Familie-venlighed:</label>
+                <div class="slider-wrapper">
+                    <span>Ikke vigtig</span>
+                    <input type="range" id="family-priority" min="1" max="5" value="3">
+                    <span>Meget vigtig</span>
+                </div>
+                <div class="value">Vægt: <span id="family-priority-value">3</span></div>
+            </div>
+
+            <div class="slider-container">
+                <label for="training-priority">Træning og lydighed:</label>
+                <div class="slider-wrapper">
+                    <span>Ikke vigtig</span>
+                    <input type="range" id="training-priority" min="1" max="5" value="3">
+                    <span>Meget vigtig</span>
+                </div>
+                <div class="value">Vægt: <span id="training-priority-value">3</span></div>
+            </div>
+
+            <div class="slider-container">
+                <label for="noise-priority">Støjniveau (gøen):</label>
+                <div class="slider-wrapper">
+                    <span>Ikke vigtig</span>
+                    <input type="range" id="noise-priority" min="1" max="5" value="3">
+                    <span>Meget vigtig</span>
+                </div>
+                <div class="value">Vægt: <span id="noise-priority-value">3</span></div>
+            </div>
+
+            <button onclick="startQuiz()" class="next-btn">Videre til spørgsmål →</button>
+        </div>
+
+        
+        <div id="quiz-section" class="section" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            
+            <div id="question-container">
+                
+            </div>
+        </div>
+
+        
+        <div id="results-section" class="section" style="display: none;">
+            <h2>🎉 Dine Resultater</h2>
+            <div class="adjust-section">
+                <h3>🔧 Juster dine prioriteringer</h3>
+                <p>Ikke helt tilfreds? Juster dine prioriteringer og se hvordan det påvirker resultatet:</p>
+                <div id="adjust-sliders" class="adjust-sliders">
+                    
+                </div>
+                <button onclick="recalculateResults()" class="adjust-btn">Genberegn resultater</button>
+            </div>
+            <div id="results-container">
+                
+            </div>
+            <div class="action-buttons">
+                <button onclick="restartTest()" class="restart-btn">Tag testen igen</button>
+                <button onclick="shareResults()" class="share-btn">Del resultater</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
